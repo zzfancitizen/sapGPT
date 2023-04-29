@@ -37,9 +37,8 @@ def save_to_deeplake(texts, embedding):
 
 
 if __name__ == "__main__":
-    os.environ['OPENAI_API_KEY'] = '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'
-    os.environ[
-        'ACTIVELOOP_TOKEN'] = 'eyJhbGciOiJIUzUxMiIsImlhdCI6MTY4MjczNjk0MSwiZXhwIjoxNjkzNDUwNDk0fQ.eyJpZCI6Inp6ZmFuY2l0aXplbiJ9.wZo50lr7_BvWzEAbj7FTCPmbHv6DN9IBgmYmqKDY6ceCsGdB_wg3x5Wu70R6FTEJlzukkw8WXYNu_0a37S-pkg'
+    os.environ['OPENAI_API_KEY'] = ''
+    os.environ['ACTIVELOOP_TOKEN'] = ''
 
     setup_proxy()
     embeddings = OpenAIEmbeddings(disallowed_special=())
