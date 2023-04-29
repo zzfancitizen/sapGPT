@@ -3,6 +3,7 @@ from langchain.vectorstores import DeepLake
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
+from Util.token import OPENAI_API_KEY, ACTIVELOOP_TOKEN
 import socket
 import socks
 
@@ -37,8 +38,8 @@ def save_to_deeplake(texts, embedding):
 
 
 if __name__ == "__main__":
-    os.environ['OPENAI_API_KEY'] = ''
-    os.environ['ACTIVELOOP_TOKEN'] = ''
+    os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+    os.environ['ACTIVELOOP_TOKEN'] = ACTIVELOOP_TOKEN
 
     setup_proxy()
     embeddings = OpenAIEmbeddings(disallowed_special=())
